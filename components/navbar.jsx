@@ -29,7 +29,7 @@ function Navbar({ router }) {
     }, [])
     
     return (
-        <nav className={navbar ?'transition duration-500 shadow-lg bg-utama-white fixed justify-between items-center w-full flex top-0 left-0 px-24 py-4 z-20':'transition duration-500 fixed justify-between items-center w-full flex top-0 left-0 px-24 py-4 z-20'}>
+        <nav className={navbar ?'transition duration-300 shadow-lg bg-utama-white fixed justify-between items-center w-full flex top-0 left-0 px-24 py-4 z-20':'transition duration-300 fixed justify-between items-center w-full flex top-0 left-0 px-24 py-4 z-20'}>
             <div>
                 <h3 className='font-poppins text-2xl font-semibold text-utama-orange'>ScoreMaster</h3>
             </div>
