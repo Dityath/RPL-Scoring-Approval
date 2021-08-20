@@ -1,6 +1,10 @@
 import Link from 'next/link';
+import { withRouter } from 'next/router';
+import { useState, useEffect } from 'react';
 
-export default function Navbar() {
+function Navbar({ router }) {
+    const [navbar, setNavbar] = useState(false);
+
     const navs = [
         { text: 'Home', href: '/' },
         { text: 'Pricing', href: '/pricing' },
@@ -8,9 +12,24 @@ export default function Navbar() {
         { text: 'Contact', href: '/contact' },
         // { text: '', href: '' },
     ];
+
+    const scrollDown = ()=> {
+        if (window.scrollY >= 90) {
+            setNavbar(true);
+        } else {
+            setNavbar(false);
+        }
+    }
+    
+    useEffect(()=>{
+        window.addEventListener('scroll', scrollDown);
+        return ()=>{
+            window.removeEventListener('scroll', scrollDown);
+        }
+    }, [])
     
     return (
-        <nav className='fixed justify-between items-center w-full flex top-0 left-0 px-24 pt-8 z-20'>
+        <nav className={navbar ?'transition duration-500 shadow-lg bg-utama-white fixed justify-between items-center w-full flex top-0 left-0 px-24 py-4 z-20':'transition duration-500 fixed justify-between items-center w-full flex top-0 left-0 px-24 py-4 z-20'}>
             <div>
                 <h3 className='font-poppins text-2xl font-semibold text-utama-orange'>ScoreMaster</h3>
             </div>
@@ -28,3 +47,5 @@ export default function Navbar() {
         </nav>
     )
 }
+
+export default withRouter(Navbar);
