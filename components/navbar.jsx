@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { withRouter } from 'next/router';
+import Button from "@material-tailwind/react/Button";
 import { useState, useEffect } from 'react';
 
 function Navbar({ router }) {
@@ -37,12 +38,13 @@ function Navbar({ router }) {
             <ul className='flex font-mulish text-utama-orange pr-8'>
                 { navs.map(nav => (
                 <li><Link href={nav.href}>
-                <a className='mx-5 text-utama-orange hover:text-opacity-75'>{nav.text}</a>
+
+                    <Button color='orange' buttonType='link' className='mx-0.5 text-utama-orange font-mulish font-normal text-base capitalize' ripple='dark'>{nav.text}</Button>
                 </Link></li>
                 )) }
             </ul>
-                <a href="/" className='px-8 mx-2 font-mulish text-utama-orange'>Sign In</a>
-                <a href="/" className='p-2 px-8 mx-2 font-mulish bg-utama-orange text-utama-white rounded-full'>Sign Up</a>
+                <Link href='/'><Button color='orange' buttonType='link' className='mx-2 font-mulish font-normal text-base capitalize' ripple='light'>Sign In</Button></Link>
+                <Link href='/flas'><a className='p-2 px-8 mx-2 font-mulish bg-utama-orange text-utama-white rounded-full'>Sign Up</a></Link>
             </div>
         </nav>
     )
