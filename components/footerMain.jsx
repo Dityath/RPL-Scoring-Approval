@@ -1,3 +1,5 @@
+import Footer from '/components/footer.jsx'
+
 export default function FooterMain() {
     return(
         <footer className='bg-utama-lightGray pt-10 px-24'>
@@ -33,7 +35,7 @@ export default function FooterMain() {
                     <path d="M19.0677 36.103H24.5453V22.3871H28.3664L28.7742 17.7943H24.5453C24.5453 17.7943 24.5453 16.0813 24.5453 15.1778C24.5453 14.0924 24.7649 13.6657 25.8127 13.6657C26.6535 13.6657 28.7742 13.6657 28.7742 13.6657V8.89716C28.7742 8.89716 25.6496 8.89716 24.9782 8.89716C20.8999 8.89716 19.0615 10.6916 19.0615 14.13C19.0615 17.1229 19.0615 17.7943 19.0615 17.7943H16.2129V22.4436H19.0615V36.103H19.0677Z" fill="white"/>
                 </svg>
             </div>
-            <p className='font-mulish text-utama-orange font-normal text-center mt-14 mb-2'>© 2021 Score Master, All Right Reserved </p>
+            <Footer />
         </footer>
     )
 }
