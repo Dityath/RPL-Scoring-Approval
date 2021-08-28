@@ -6,7 +6,7 @@ import Checkbox from "@material-tailwind/react/Checkbox"
 
 import Footer from "../../components/footer"
 
-export default function signIn() {
+export default function forgetPass() {
     return (
         <>
             <section className='bg-signIn-pattern bg-cover bg-no-repeat px-24 pt-24 pb-2 h-auto'>
@@ -18,23 +18,18 @@ export default function signIn() {
                             </svg>
                         </Button>
                     </Link>
-                    <h1 className='font-mulish text-utama-orange font-semibold text-3xl ml-4'>Hello, welcome back !</h1>
+                    <h1 className='font-mulish text-utama-orange font-semibold text-3xl ml-4'>Reset Password</h1>
                 </section>
                 <section className='mt-24'>
                     <div className='w-1/3'>
                         <Input type='text' color='orange' placeholder='Username' />
                     </div>
                     <div className='w-1/3 mt-10'>
-                        <Input type='text' color='orange' placeholder='Password' />
+                        <Input type='text' color='orange' placeholder='Email' />
                     </div>
-                    <div className='mt-px mb-3'>
-                        <Link href='/login/forgetPass'>
-                            <a className='font-poppins text-utama-textGray opacity-60 text-xs'>Forget Password?</a>
-                        </Link>
-                    </div>
-                    <Checkbox color='orange' text='Remember me' id='checkbox' className='font-poppins text-sm' />
+                    
+                    <Checkbox color='orange' text='Remember me' id='checkbox' />
                 </section>
-                <Button color="" size="regular" className="font-mulish font-normal bg-utama-orange text-sm px-10 mt-6 mb-4 capitalize font-medium" ripple='dark'>Log In</Button>
                 <div className='mt-40'>
                     <Footer />
                 </div>

@@ -21,6 +21,7 @@ module.exports = {
       backgroundImage: theme => ({
         'index-pattern': "url('/background/bg-page-index.png')",
         'signIn-pattern' : "url('/background/bg-signin.png')",
+        'general-pattern' : "url('/background/bg-general.png')",
       })
     }
   },
