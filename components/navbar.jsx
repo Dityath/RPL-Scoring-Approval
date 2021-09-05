@@ -6,13 +6,13 @@ import { useState, useEffect } from 'react';
 function Navbar({ router }) {
     const [navbar, setNavbar] = useState(false);
 
-    const navs = [
-        { text: 'Home', href: '/' },
-        { text: 'Pricing', href: '/pricing' },
-        { text: 'Why Us?', href: '/whyus' },
-        { text: 'Contact', href: '/contact' },
-        // { text: '', href: '' },
-    ];
+    // const navs = [
+    //     { text: 'Home', href: '/' },
+    //     { text: 'Pricing', href: '/' },
+    //     { text: 'Why Us?', href: '/' },
+    //     { text: 'Contact', href: '/' },
+    //     // { text: '', href: '' },
+    // ];
 
     const scrollDown = ()=> {
         if (window.scrollY >= 90) {
@@ -36,14 +36,20 @@ function Navbar({ router }) {
             </div>
             <div className='flex items-center'>
                 <ul className='flex font-mulish text-utama-orange pr-8'>
-                    { navs.map(nav => (
-                    <li><Link href={nav.href}>
-
-                        <Button color='orange' buttonType='link' className='mx-0.5 text-utama-orange font-mulish font-normal text-base capitalize' ripple='dark'>{nav.text}</Button>
+                    <li><Link href='/' passHref>
+                        <Button color='orange' buttonType='link' className='mx-0.5 text-utama-orange font-mulish font-normal text-base capitalize' ripple='dark'>Home</Button>
                     </Link></li>
-                    )) }
+                    <li><Link href='/' passHref>
+                        <Button color='orange' buttonType='link' className='mx-0.5 text-utama-orange font-mulish font-normal text-base capitalize' ripple='dark'>Pricing</Button>
+                    </Link></li>
+                    <li><Link href='/' passHref>
+                        <Button color='orange' buttonType='link' className='mx-0.5 text-utama-orange font-mulish font-normal text-base capitalize' ripple='dark'>Why us?</Button>
+                    </Link></li>
+                    <li><Link href='/' passHref>
+                        <Button color='orange' buttonType='link' className='mx-0.5 text-utama-orange font-mulish font-normal text-base capitalize' ripple='dark'>Contact</Button>
+                    </Link></li>
                 </ul>
-                <Link href='/login/signIn'><a className='p-2 px-8 mx-2 font-mulish bg-utama-orange text-utama-white rounded-full'>Sign In</a></Link>
+                <Link href='/login/signIn' passHref><a className='p-2 px-8 mx-2 font-mulish bg-utama-orange text-utama-white rounded-full'>Sign In</a></Link>
             </div>
         </nav>
     )
