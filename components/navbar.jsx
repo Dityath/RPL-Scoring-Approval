@@ -43,8 +43,7 @@ function Navbar({ router }) {
                     </Link></li>
                     )) }
                 </ul>
-                <Link href='/login/signIn'><Button color='orange' buttonType='link' className='mx-2 font-mulish font-normal text-base capitalize' ripple='light'>Sign In</Button></Link>
-                <Link href='/flas'><a className='p-2 px-8 mx-2 font-mulish bg-utama-orange text-utama-white rounded-full'>Sign Up</a></Link>
+                <Link href='/login/signIn'><a className='p-2 px-8 mx-2 font-mulish bg-utama-orange text-utama-white rounded-full'>Sign In</a></Link>
             </div>
         </nav>
     )
